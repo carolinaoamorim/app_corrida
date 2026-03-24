@@ -12,7 +12,7 @@ public class MotoristaController {
     private MotoristaService motoristaService;
 
     @PostMapping("/motoristas")
-    public Motorista saveMotorista(@RequestBody Motorista motorista) {
+    public Motorista criarMotorista(@RequestBody Motorista motorista) {
         return motoristaService.criarMotorista(motorista);
     }
 
