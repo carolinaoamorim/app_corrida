@@ -11,7 +11,7 @@ public class CorridaController {
     @Autowired
     private CorridaService corridaService;
 
-    @PostMapping("/corridas/{IdUsuario}")
+    @PostMapping("/corridas/{idUsuario}")
     public Corrida criarCorrida(@RequestBody Corrida corrida, @PathVariable String idUsuario) {
         return corridaService.criarCorrida(corrida, idUsuario);
     }

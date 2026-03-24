@@ -24,16 +24,12 @@ public class CorridaService {
     private MotoristaService motoristaService;
 
     public Corrida criarCorrida(Corrida corrida, String idUsuario) {
-        if (corrida.getUsuario() == null || corrida.getMotorista() == null) {
+        if (corrida.getMotorista() == null) {
             throw new RuntimeException("Corrida inválida");
         }
 
         Usuario usuario = usuarioService.getUsuario(idUsuario);
-        if (!usuario.isAtivo()) {
-            throw new RuntimeException("Usuario inválido");
-        } else {
-            corrida.setUsuario(usuario);
-        }
+        corrida.setUsuario(usuario);
 
         Motorista motorista = motoristaService.getMotorista(corrida.getMotorista().getId());
         if (!motorista.isAtivo()) {
@@ -44,7 +40,8 @@ public class CorridaService {
 
         corrida.setId(UUID.randomUUID().toString());
         corrida.setData(LocalDateTime.now());
-        motorista.setAtivo(true);
+        corrida.setAtivo(true);
+
         corridas.put(corrida.getId(), corrida);
         return corrida;
     }

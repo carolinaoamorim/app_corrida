@@ -1,0 +1,395 @@
+{
+  "info": {
+    "_postman_id": "34f065b0-3a71-4d7a-a338-1c13616a3ba0",
+    "name": "App-Corridas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52953489",
+    "_collection_link": "https://go.postman.co/collection/52953489-34f065b0-3a71-4d7a-a338-1c13616a3ba0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Criar Usuario",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Carolina Amorim\",\n  \"email\": \"carolina@email.com\",\n  \"dataNascimento\": \"17/05/2007\",\n  \"cpf\": \"10234576529\",\n  \"ativo\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/usuarios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuarios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Usuarios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/usuarios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuarios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Usuarios por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/usuarios/9b40c2e5-b2bb-4c76-9dcb-ebec2602b2f1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuarios",
+            "9b40c2e5-b2bb-4c76-9dcb-ebec2602b2f1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Editar Usuario",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Carolina Amorim\",\n  \"email\": \"carolina@email.com\",\n  \"dataNascimento\": \"17/05/2007\",\n  \"cpf\": \"888\",\n  \"ativo\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/usuarios/9b40c2e5-b2bb-4c76-9dcb-ebec2602b2f1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuarios",
+            "9b40c2e5-b2bb-4c76-9dcb-ebec2602b2f1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Deletar Usuario",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/usuarios/9b40c2e5-b2bb-4c76-9dcb-ebec2602b2f1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuarios",
+            "9b40c2e5-b2bb-4c76-9dcb-ebec2602b2f1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criar Motorista",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"placaCarro\": \"12345678\",\n  \"cpf\": \"10234576529\",\n  \"nome\": \"Nivalda Amorim\",\n  \"email\": \"nivaldo@email.com\",\n  \"ativo\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/motoristas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "motoristas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Motoristas",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"placaCarro\": \"12345678\",\n  \"cpf\": \"10234576529\",\n  \"nome\": \"Nivalda Amorim\",\n  \"email\": \"nivaldo@email.com\",\n  \"ativo\": true\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/motoristas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "motoristas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Motoristas por ID",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"placaCarro\": \"12345678\",\n  \"cpf\": \"10234576529\",\n  \"nome\": \"Nivalda Amorim\",\n  \"email\": \"nivaldo@email.com\",\n  \"ativo\": true\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/motoristas/426ac88b-201a-4bf8-83f6-c32ed8ef8fcb",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "motoristas",
+            "426ac88b-201a-4bf8-83f6-c32ed8ef8fcb"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Editar Motorista",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"placaCarro\": \"8888\",\n  \"cpf\": \"10234576529\",\n  \"nome\": \"Nivalda Amorim\",\n  \"email\": \"nivaldo@email.com\",\n  \"ativo\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/motoristas/426ac88b-201a-4bf8-83f6-c32ed8ef8fcb",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "motoristas",
+            "426ac88b-201a-4bf8-83f6-c32ed8ef8fcb"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Deletar Motorista",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"placaCarro\": \"8888\",\n  \"cpf\": \"10234576529\",\n  \"nome\": \"Nivalda Amorim\",\n  \"email\": \"nivaldo@email.com\",\n  \"ativo\": true\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/motoristas/426ac88b-201a-4bf8-83f6-c32ed8ef8fcb",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "motoristas",
+            "426ac88b-201a-4bf8-83f6-c32ed8ef8fcb"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criar Corrida",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario\": { \"id\": \"99817493-6199-4faf-a72d-617adb1cb32d\" },\n  \"motorista\": { \"id\": \"624521ff-ba44-4273-99f1-e931b063c277\" }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/corridas/99817493-6199-4faf-a72d-617adb1cb32d",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "corridas",
+            "99817493-6199-4faf-a72d-617adb1cb32d"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Corridas",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario\": { \"id\": \"7bdf30e6-2bd6-4db4-a9b1-f01e908a5bd6\" },\n  \"motorista\": { \"id\": \"9c28cea4-3463-4966-9e27-99d0bc4d6b87\" }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/corridas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "corridas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Corridas por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/corridas/11126552-781e-4f5d-901b-a4e73aefee2c",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "corridas",
+            "11126552-781e-4f5d-901b-a4e73aefee2c"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Editar Corrida",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario\": { \"id\": \"7bdf30e6-2bd6-4db4-a9b1-f01e908a5bd6\" },\n  \"motorista\": { \"id\": \"9c28cea4-3463-4966-9e27-99d0bc4d6b87\" }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/corridas/11126552-781e-4f5d-901b-a4e73aefee2c",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "corridas",
+            "11126552-781e-4f5d-901b-a4e73aefee2c"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Deletar Corrida",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario\": { \"id\": \"7bdf30e6-2bd6-4db4-a9b1-f01e908a5bd6\" },\n  \"motorista\": { \"id\": \"9c28cea4-3463-4966-9e27-99d0bc4d6b87\" }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/corridas/11126552-781e-4f5d-901b-a4e73aefee2c",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "corridas",
+            "11126552-781e-4f5d-901b-a4e73aefee2c"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
