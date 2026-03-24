@@ -1,0 +1,13 @@
+package br.insper.app_corrida;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AppCorridaApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AppCorridaApplication.class, args);
+	}
+
+}
